@@ -1,0 +1,29 @@
+//
+//  ViewController.swift
+//  CustomeQueue
+//
+//  Created by Sushil Kumar Singh on 03/07/21.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let queue = Queue<Int>()
+        queue.enqueue(newValue: 1)
+        queue.enqueue(newValue: 2)
+        queue.enqueue(newValue: 3)
+        var next = queue.front.next
+        while (next != nil) {
+            print("queue value:\(String(describing: next?.value))")
+            next = next?.next
+        }
+        // Do any additional setup after loading the view.
+    }
+
+
+}
+
